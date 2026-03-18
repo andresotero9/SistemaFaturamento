@@ -11,8 +11,8 @@
 	<groupId>br.com.vivo</groupId>
 	<artifactId>faturamento-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>faturamento-api</name>
-	<description>Faturamento API</description>
+	<name/>
+	<description/>
 	<url/>
 	<licenses>
 		<license/>
@@ -39,12 +39,10 @@
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>3.0.2</version>
 		</dependency>
-
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
+			<groupId>br.com.vivo</groupId>
+			<artifactId>database-sdk</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
