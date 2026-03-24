@@ -5,11 +5,15 @@ import br.com.vivo.databasesdk.enums.TransactionStatus;
 import br.com.vivo.databasesdk.model.Transacao;
 import br.com.vivo.databasesdk.service.TransacaoService;
 import br.com.vivo.databasesdk.util.ConvertObjectDTO;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@ComponentScan(basePackages = {
+        "br.com.vivo.databasesdk"
+})
 @Service
 public class ConciliacaoProducerService {
 
@@ -26,7 +30,6 @@ public class ConciliacaoProducerService {
     public void produce() {
         System.out.println("findByTransactionStatus");
         List<Transacao> list = transacaoService.findByTransactionStatus(TransactionStatus.PENDING);
-        System.out.println("convertTransacaoToDto");
         List<TransacaoDTO> listDTO =
                 list.stream()
                         .map(ConvertObjectDTO::convertTransacaoToDto).toList();

@@ -13,7 +13,7 @@ public class ConciliacaoProducerScheduler {
         this.service = service;
     }
 
-    @Scheduled(fixedRate = 1000 * 60)
+    @Scheduled(fixedRate = 1000 * 60 * 15)
     public void scheduler() {
         this.service.produce();
     }
