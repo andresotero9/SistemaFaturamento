@@ -1,5 +1,6 @@
 package br.com.vivo.databasesdk.model;
 
+import br.com.sotero.databasecommon.model.ClassEntity;
 import br.com.vivo.databasesdk.enums.TransactionStatus;
 import jakarta.persistence.*;
 
@@ -7,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "transacao")
-public class Transacao {
+public class Transacao extends ClassEntity<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
